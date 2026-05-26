@@ -16,7 +16,7 @@ adam_betas: [0.0, 0.9]
 trainer:
   resume: 
   force_resume: False
-  work_dir: ./result/dm
+  work_dir: /content/drive/MyDrive/dmfont_exp/result/dm # Colab 사용에 맞게 드라이브로 주소 변경. 5/26.
   # Losses
   pixel_loss_type: l1
   pixel_w: 0.1
@@ -41,7 +41,7 @@ gen:
 dset:
   loader:
     batch_size: 8
-    num_workers: 16
+    num_workers: 2 # 16 -> 2 5/26 수정. colab에 맞게.
   train:
     n_in_s: 3
     n_in_min: 1
